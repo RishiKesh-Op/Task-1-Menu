@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interactive Navigation Menu</title>
+<style>
+ {
+  margin: 0;
+  padding: 0;
+ }
+body
+ {
+  fornt family: Monaco;
+  height: 200vh;
+ }
+ .navbar
+  {
+   display: flex;
+   position: fixed;
+   align item: center;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   background: black;
+   padding: 10px 20px;
+   transition: background-color 0.3s ease;
+   
+  }
+ .navbar.scrolled 
+   {
+    background-color: #555;
+   }
+ .nav-list
+   {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    
+   }
+ .nav-list li
+   {
+    margin-right: 20px;
+   } 
+ .nav-list a 
+   {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease;
+   }
+ .nav-list li a:hover
+   {
+    color: yellowgreen;
+   }
+ .btn:hover
+   {
+    color: yellowgreen;
+   }
+</style>
+</head>
+<body>
+<nav class="navbar">
+<ul class="nav-list">
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+<div class="rightNav">
+<input type="text" name="search" id="search" placeholder="Search">
+<button class="btn btn-sm">Search</button
+</div>
+</nav> 
+<script>
+ window.addEventListener('scroll', function() 
+ {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 50) 
+   {
+    navbar.classList.add('scrolled');
+   } else 
+     {
+      navbar.classList.remove('scrolled');
+     }
+ });
+</body>
+</html>
